@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1180" viewBox="0 0 1080 1180" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+
+  <defs>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3b5bfd"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#17915f"/>
+    </marker>
+    <marker id="agr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9aa1b0"/>
+    </marker>
+  </defs>
+
+  <rect width="1080" height="1180" fill="#f7f8fa"/>
+
+  <!-- ================= Title ================= -->
+  <text x="60" y="54" font-size="24" font-weight="700" fill="#16181d">Saving a user — the 8 steps</text>
+  <text x="60" y="80" font-size="14" fill="#6b7280">Follow 1 → 4 down, then 5 → 8 back up. Same for every screen in the app.</text>
+
+  <!-- ================= Setup row ================= -->
+  <text x="60" y="112" font-size="11" font-weight="700" fill="#9aa1b0" letter-spacing="1.2">FIRST, THE ROUTE OPENS</text>
+
+  <rect x="60" y="124" width="290" height="56" rx="10" fill="#ffffff" stroke="#d8dce4"/>
+  <text x="205" y="147" font-size="14.5" font-weight="650" fill="#16181d" text-anchor="middle">Router</text>
+  <text x="205" y="166" font-size="11" fill="#6b7280" text-anchor="middle" font-family="SFMono-Regular, Menlo, monospace">route/app_page.dart</text>
+
+  <line x1="356" y1="152" x2="384" y2="152" stroke="#9aa1b0" stroke-width="1.6" marker-end="url(#agr)"/>
+
+  <rect x="390" y="124" width="290" height="56" rx="10" fill="#ffffff" stroke="#d8dce4"/>
+  <text x="535" y="147" font-size="14.5" font-weight="650" fill="#16181d" text-anchor="middle">Binding</text>
+  <text x="535" y="166" font-size="11" fill="#6b7280" text-anchor="middle" font-family="SFMono-Regular, Menlo, monospace">binding/user_binding.dart</text>
+
+  <line x1="686" y1="152" x2="714" y2="152" stroke="#9aa1b0" stroke-width="1.6" marker-end="url(#agr)"/>
+
+  <rect x="720" y="124" width="300" height="56" rx="10" fill="#ffffff" stroke="#d8dce4"/>
+  <text x="870" y="147" font-size="14.5" font-weight="650" fill="#16181d" text-anchor="middle">Controller is built</text>
+  <text x="870" y="166" font-size="11" fill="#6b7280" text-anchor="middle">before the screen draws</text>
+
+  <!-- ================= Column headers ================= -->
+  <text x="405" y="222" font-size="12.5" font-weight="700" fill="#3b5bfd" text-anchor="end">REQUEST — going out ↓</text>
+  <text x="675" y="222" font-size="12.5" font-weight="700" fill="#17915f">↑ RESPONSE — coming back</text>
+
+  <!-- ================= Band 1: UI ================= -->
+  <rect x="60" y="240" width="960" height="72" rx="12" fill="#ffffff" stroke="#d8dce4"/>
+  <text x="92" y="272" font-size="17" font-weight="700" fill="#16181d">UI</text>
+  <text x="92" y="293" font-size="11.5" fill="#6b7280" font-family="SFMono-Regular, Menlo, monospace">screen/user/user_form_screen.dart</text>
+  <text x="988" y="272" font-size="12.5" fill="#6b7280" text-anchor="end">The form. Draws itself from the controller,</text>
+  <text x="988" y="290" font-size="12.5" fill="#6b7280" text-anchor="end">and redraws whenever the controller changes.</text>
+
+  <!-- gap 1 : 312 -> 404, centre 358 -->
+  <line x1="430" y1="320" x2="430" y2="396" stroke="#3b5bfd" stroke-width="2" marker-end="url(#ab)"/>
+  <circle cx="430" cy="358" r="13" fill="#3b5bfd"/>
+  <text x="430" y="362.5" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="405" y="354" font-size="13" font-weight="600" fill="#3b5bfd" text-anchor="end">user taps Save</text>
+  <text x="405" y="371" font-size="11.5" fill="#6b7280" text-anchor="end">a controller method runs</text>
+
+  <line x1="650" y1="396" x2="650" y2="320" stroke="#17915f" stroke-width="2" marker-end="url(#ag)"/>
+  <circle cx="650" cy="358" r="13" fill="#17915f"/>
+  <text x="650" y="362.5" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">8</text>
+  <text x="675" y="354" font-size="13" font-weight="600" fill="#17915f">.obs value changes</text>
+  <text x="675" y="371" font-size="11.5" fill="#6b7280">Obx rebuilds — the UI is never called</text>
+
+  <!-- ================= Band 2: Controller ================= -->
+  <rect x="60" y="404" width="960" height="72" rx="12" fill="#ffffff" stroke="#d8dce4"/>
+  <text x="92" y="436" font-size="17" font-weight="700" fill="#16181d">Controller</text>
+  <text x="92" y="457" font-size="11.5" fill="#6b7280" font-family="SFMono-Regular, Menlo, monospace">controller/user_form_controller.dart</text>
+  <text x="988" y="436" font-size="12.5" fill="#6b7280" text-anchor="end">Holds the state in .obs / Rxn.</text>
+  <text x="988" y="454" font-size="12.5" fill="#6b7280" text-anchor="end">Finds its service with Get.find.</text>
+
+  <!-- gap 2 : 476 -> 568, centre 522 -->
+  <line x1="430" y1="484" x2="430" y2="560" stroke="#3b5bfd" stroke-width="2" marker-end="url(#ab)"/>
+  <circle cx="430" cy="522" r="13" fill="#3b5bfd"/>
+  <text x="430" y="526.5" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="405" y="518" font-size="13" font-weight="600" fill="#3b5bfd" text-anchor="end">UserCreateRequest</text>
+  <text x="405" y="535" font-size="11.5" fill="#6b7280" text-anchor="end">a Dart object — still not JSON</text>
+
+  <line x1="650" y1="560" x2="650" y2="484" stroke="#17915f" stroke-width="2" marker-end="url(#ag)"/>
+  <circle cx="650" cy="522" r="13" fill="#17915f"/>
+  <text x="650" y="526.5" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">7</text>
+  <text x="675" y="518" font-size="13" font-weight="600" fill="#17915f">Either&lt;ApiException, UserModel&gt;</text>
+  <text x="675" y="535" font-size="11.5" fill="#6b7280">Left = it failed · Right = it worked</text>
+
+  <!-- ================= Band 3: Service ================= -->
+  <rect x="60" y="568" width="960" height="72" rx="12" fill="#ffffff" stroke="#d8dce4"/>
+  <text x="92" y="600" font-size="17" font-weight="700" fill="#16181d">Service</text>
+  <text x="92" y="621" font-size="11.5" fill="#6b7280" font-family="SFMono-Regular, Menlo, monospace">data/service/user_service.dart</text>
+  <text x="988" y="600" font-size="12.5" fill="#6b7280" text-anchor="end">Calls toJson on the way out,</text>
+  <text x="988" y="618" font-size="12.5" fill="#6b7280" text-anchor="end">fromJson on the way back.</text>
+
+  <!-- gap 3 : 640 -> 732, centre 686 -->
+  <line x1="430" y1="648" x2="430" y2="724" stroke="#3b5bfd" stroke-width="2" marker-end="url(#ab)"/>
+  <circle cx="430" cy="686" r="13" fill="#3b5bfd"/>
+  <text x="430" y="690.5" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="405" y="682" font-size="13" font-weight="600" fill="#3b5bfd" text-anchor="end">request.toJson()</text>
+  <text x="405" y="699" font-size="11.5" fill="#6b7280" text-anchor="end">now it is a Map — the service does this</text>
+
+  <line x1="650" y1="724" x2="650" y2="648" stroke="#17915f" stroke-width="2" marker-end="url(#ag)"/>
+  <circle cx="650" cy="686" r="13" fill="#17915f"/>
+  <text x="650" y="690.5" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">6</text>
+  <text x="675" y="682" font-size="13" font-weight="600" fill="#17915f">Map&lt;String, dynamic&gt;</text>
+  <text x="675" y="699" font-size="11.5" fill="#6b7280">PageResponse.fromJson(json, UserModel.fromJson)</text>
+
+  <!-- ================= Band 4: ApiClient ================= -->
+  <rect x="60" y="732" width="960" height="72" rx="12" fill="#ffffff" stroke="#d8dce4"/>
+  <text x="92" y="764" font-size="17" font-weight="700" fill="#16181d">ApiClient</text>
+  <text x="92" y="785" font-size="11.5" fill="#6b7280" font-family="SFMono-Regular, Menlo, monospace">core/util/api_client.dart</text>
+  <text x="988" y="764" font-size="12.5" fill="#6b7280" text-anchor="end">The only file that imports Dio.</text>
+  <text x="988" y="782" font-size="12.5" fill="#6b7280" text-anchor="end">Attaches the token, turns errors into ApiException.</text>
+
+  <!-- gap 4 : 804 -> 896, centre 850 -->
+  <line x1="430" y1="812" x2="430" y2="888" stroke="#3b5bfd" stroke-width="2" marker-end="url(#ab)"/>
+  <circle cx="430" cy="850" r="13" fill="#3b5bfd"/>
+  <text x="430" y="854.5" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+  <text x="405" y="846" font-size="13" font-weight="600" fill="#3b5bfd" text-anchor="end">POST /api/users</text>
+  <text x="405" y="863" font-size="11.5" fill="#6b7280" text-anchor="end">Authorization: Bearer …</text>
+
+  <line x1="650" y1="888" x2="650" y2="812" stroke="#17915f" stroke-width="2" marker-end="url(#ag)"/>
+  <circle cx="650" cy="850" r="13" fill="#17915f"/>
+  <text x="650" y="854.5" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+  <text x="675" y="846" font-size="13" font-weight="600" fill="#17915f">JSON comes back</text>
+  <text x="675" y="863" font-size="11.5" fill="#6b7280">{ status, title, data: { … } }</text>
+
+  <!-- ================= Band 5: Server ================= -->
+  <rect x="60" y="896" width="960" height="72" rx="12" fill="#16181d"/>
+  <text x="92" y="928" font-size="17" font-weight="700" fill="#ffffff">Spring Boot</text>
+  <text x="92" y="949" font-size="11.5" fill="#9aa1b0" font-family="SFMono-Regular, Menlo, monospace">localhost:8910</text>
+  <text x="988" y="928" font-size="12.5" fill="#9aa1b0" text-anchor="end">Validates, saves the row,</text>
+  <text x="988" y="946" font-size="12.5" fill="#9aa1b0" text-anchor="end">answers with the BaseApi envelope.</text>
+
+  <!-- ================= SSE note ================= -->
+  <rect x="60" y="998" width="960" height="72" rx="12" fill="#fdf1dc" stroke="#e8c98a"/>
+  <text x="92" y="1026" font-size="13.5" font-weight="700" fill="#b4740b">The one exception — SSE</text>
+  <text x="92" y="1048" font-size="12.5" fill="#7a5410">The server can also push on its own. An SseEvent goes straight from Spring Boot to the Controller (step 8 only) —</text>
+  <text x="92" y="1064" font-size="12.5" fill="#7a5410">no tap, no request, steps 1–4 never happen. That is how one phone sees what another phone just changed.</text>
+
+  <!-- ================= Footer ================= -->
+  <text x="60" y="1108" font-size="12.5" fill="#6b7280">
+    <tspan font-weight="650" fill="#16181d">Set up once at startup:</tspan>
+    DependencyInjectionBinding builds TokenStorage → ApiClient → every Service, and keeps them for the app's whole life.
+  </text>
+  <text x="60" y="1130" font-size="12.5" fill="#6b7280">
+    A page binding therefore creates only the controller — the service it needs already exists.
+  </text>
+
+</svg>
